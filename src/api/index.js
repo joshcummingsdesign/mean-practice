@@ -38,15 +38,11 @@ router.put('/todos/:id', function(req, res) {
 
 router.delete('/todos/:id', function(req, res) {
   var id = req.params.id;
-  var todo = req.body;
-  if (todo && todo._id !== id) {
-    return res.status(500).json({err: "IDs do not match!"});
-  }
-  Todo.findByIdAndRemove(id, function(err, todo) {
+  Todo.findByIdAndRemove(id, function(err, result) {
     if (err) {
-      return res.status(500).json({err: err.message});
+      return res.status(500).json({ err: err.message });
     }
-    res.json({todo: todo, message: 'Todo deleted!'});
+    res.json({message: 'Todo deleted!'});
   });
 });
 
