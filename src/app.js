@@ -12,7 +12,7 @@ app.use(parser.json());
 app.use('/api', router);
 
 app.get('*', function(req, res) {
-  res.send(404, '404 Not found');
+  res.status(404).send('404 Not Found');
 });
 
 app.listen(3000, function() {
