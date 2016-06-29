@@ -1,0 +1,19 @@
+{
+  "name": "mean-practice",
+  "version": "1.0.0",
+  "description": "A little practice with the MEAN stack.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Cummings <hello@joshcummingsdesign.com> (http://joshcummingsdesign.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "1.13.1"
+  },
+  "dependencies": {
+    "angular": "1.5.7",
+    "express": "4.14.0",
+    "mongoose": "4.5.2"
+  }
+}
